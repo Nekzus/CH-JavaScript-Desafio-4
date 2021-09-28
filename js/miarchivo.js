@@ -4,7 +4,7 @@ del plan seleccionado. En caso de ingresar un numero de pagos no contemplado, se
 
 //** Se solicitan los datos de ingreso para realizar los calculos */
 let precioCompra = Number (prompt('Ingresar Monto Producto en $'));
-let cantidadCuotas = parseInt(prompt('Seleccionar Cantidad de Pago/s \n( 1, 2, 3, 6, 9 y 12 pagos)'));
+let cantidadCuotas = parseInt(prompt('Elegir Plan de Pago/s \n( 1, 2, 3, 6, 9 y 12 pagos)'));
 let precioFinal = 0;
 
 //** Se verifica mediante while que el precio de compra sea un numero para mantener la ejecucion, de lo contrario sale del programa */
@@ -35,11 +35,11 @@ while (parseInt(precioCompra)) {
             mensaje(precioFinal, precioCompra, cantidadCuotas); // se ejecuta funcion mensaje la cual muestra mensaje con precio final, numero de pagos, valor de cada pago e intereses
             break;
         default:
-            alert(`El pago en ${cantidadCuotas} cuotas no esta disponible`);
+            alert(`El plan en ${cantidadCuotas} pagos no esta disponible`);
     }
         //** Se vuelven a solicitar los datos de ingreso para el calculo */
         precioCompra = Number(prompt('Ingresar Monto Producto en $'));
-        cantidadCuotas = parseInt(prompt('Seleccionar Cantidad de Pago/s \n( 1, 2, 3, 6, 9 y 12 pagos)'));
+        cantidadCuotas = parseInt(prompt('Elegir Plan de Pago/s \n( 1, 2, 3, 6, 9 y 12 pagos)'));
         precioFinal = 0;
 }
 
